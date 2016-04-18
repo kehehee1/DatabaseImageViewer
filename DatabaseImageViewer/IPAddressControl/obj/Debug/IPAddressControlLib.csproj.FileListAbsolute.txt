@@ -1,0 +1,16 @@
+C:\Users\sgb\Desktop\www.NewXing.com\bin\Debug\IPAddressControlLib.dll
+C:\Users\sgb\Desktop\www.NewXing.com\bin\Debug\IPAddressControlLib.pdb
+C:\Users\sgb\Desktop\www.NewXing.com\bin\Debug\IPAddressControlLib.dll.CodeAnalysisLog.xml
+C:\Users\sgb\Desktop\www.NewXing.com\bin\Debug\IPAddressControlLib.dll.lastcodeanalysissucceeded
+C:\Users\sgb\Desktop\www.NewXing.com\obj\Debug\IPAddressControlLib.Properties.Resources.resources
+C:\Users\sgb\Desktop\www.NewXing.com\obj\Debug\IPAddressControlLib.csproj.GenerateResource.Cache
+C:\Users\sgb\Desktop\www.NewXing.com\obj\Debug\IPAddressControlLib.dll
+C:\Users\sgb\Desktop\www.NewXing.com\obj\Debug\IPAddressControlLib.pdb
+F:\VSProjects\VS2010\DatabaseImageViewer\DatabaseImageViewer\IPAddressControl\bin\Debug\IPAddressControlLib.dll
+F:\VSProjects\VS2010\DatabaseImageViewer\DatabaseImageViewer\IPAddressControl\bin\Debug\IPAddressControlLib.pdb
+F:\VSProjects\VS2010\DatabaseImageViewer\DatabaseImageViewer\IPAddressControl\bin\Debug\IPAddressControlLib.dll.CodeAnalysisLog.xml
+F:\VSProjects\VS2010\DatabaseImageViewer\DatabaseImageViewer\IPAddressControl\bin\Debug\IPAddressControlLib.dll.lastcodeanalysissucceeded
+F:\VSProjects\VS2010\DatabaseImageViewer\DatabaseImageViewer\IPAddressControl\obj\Debug\IPAddressControlLib.Properties.Resources.resources
+F:\VSProjects\VS2010\DatabaseImageViewer\DatabaseImageViewer\IPAddressControl\obj\Debug\IPAddressControlLib.csproj.GenerateResource.Cache
+F:\VSProjects\VS2010\DatabaseImageViewer\DatabaseImageViewer\IPAddressControl\obj\Debug\IPAddressControlLib.dll
+F:\VSProjects\VS2010\DatabaseImageViewer\DatabaseImageViewer\IPAddressControl\obj\Debug\IPAddressControlLib.pdb

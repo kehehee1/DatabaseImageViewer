@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type="text/xsl" href="d:\program files (x86)\microsoft visual studio 10.0\team tools\static analysis tools\fxcop\Xml\CodeAnalysisReport.xsl"?>
+<FxCopReport Version="10.0">
+ <Namespaces>
+  <Namespace Name="IPAddressControlLib">
+   <Messages>
+    <Message TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020" Status="Active" Created="2016-04-14 14:02:24Z" FixCategory="Breaking">
+     <Issue Certainty="50" Level="Warning">考虑将“IPAddressControlLib”中定义的类型与另一个命名空间合并。</Issue>
+    </Message>
+   </Messages>
+  </Namespace>
+ </Namespaces>
+ <Targets>
+  <Target Name="C:\Users\sgb\Desktop\www.NewXing.com\bin\Debug\IPAddressControlLib.dll">
+   <Modules>
+    <Module Name="ipaddresscontrollib.dll">
+     <Messages>
+      <Message TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824" Status="Active" Created="2016-04-14 14:02:24Z" FixCategory="NonBreaking">
+       <Issue Certainty="95" Level="Warning">由于程序集 'IPAddressControlLib.dll' 包含基于 ResX 的资源文件，因此请使用 NeutralResourcesLanguage 特性来标记它，并指定该程序集内的资源所采用的语言。这会改进首次检索资源时的查找性能。</Issue>
+      </Message>
+     </Messages>
+     <Namespaces>
+      <Namespace Name="IPAddressControlLib">
+       <Types>
+        <Type Name="DotControl" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#OnPaint(System.Windows.Forms.PaintEventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="False">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-04-14 14:02:24Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\sgb\Desktop\www.NewXing.com" File="DotControl.cs" Line="129">在方法 'DotControl.OnPaint(PaintEventArgs)' 中，请在对 'new SolidBrush(backColor)' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\sgb\Desktop\www.NewXing.com" File="DotControl.cs" Line="134">在方法 'DotControl.OnPaint(PaintEventArgs)' 中，请在对 'new SolidBrush(textColor)' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\sgb\Desktop\www.NewXing.com" File="DotControl.cs" Line="131">在方法 'DotControl.OnPaint(PaintEventArgs)' 中，请在对 'stringFormat' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+            <Message Id="0" TypeName="验证公共方法的参数" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-04-14 14:02:24Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\sgb\Desktop\www.NewXing.com" File="DotControl.cs" Line="129">在外部可见方法 'DotControl.OnPaint(PaintEventArgs)' 中，请在使用参数“e”之前先对其进行验证。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="FieldControl" Kind="Class" Accessibility="Assembly" ExternallyVisible="False">
+         <Members>
+          <Member Name="#OnKeyDown(System.Windows.Forms.KeyEventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="False">
+           <Messages>
+            <Message Id="0" TypeName="验证公共方法的参数" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-04-14 14:02:24Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\sgb\Desktop\www.NewXing.com" File="FieldControl.cs" Line="331">在外部可见方法 'FieldControl.OnKeyDown(KeyEventArgs)' 中，请在使用参数“e”之前先对其进行验证。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnKeyPress(System.Windows.Forms.KeyPressEventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="False">
+           <Messages>
+            <Message Id="0" TypeName="验证公共方法的参数" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-04-14 14:02:24Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\sgb\Desktop\www.NewXing.com" File="FieldControl.cs" Line="399">在外部可见方法 'FieldControl.OnKeyPress(KeyPressEventArgs)' 中，请在使用参数“e”之前先对其进行验证。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+        <Type Name="IPAddressControl" Kind="Class" Accessibility="Public" ExternallyVisible="True">
+         <Members>
+          <Member Name="#GetTextMetrics(System.IntPtr,System.Drawing.Font)" Kind="Method" Static="True" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="IPAddressControlLib.NativeMethods.ReleaseDC(System.IntPtr,System.IntPtr)" TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806" Status="Active" Created="2016-04-14 14:02:24Z" FixCategory="NonBreaking">
+             <Issue Name="HResultOrErrorCode" Certainty="95" Level="Warning" Path="C:\Users\sgb\Desktop\www.NewXing.com" File="IPAddressControl.cs" Line="478">'IPAddressControl.GetTextMetrics(IntPtr, Font)' 调用 'NativeMethods.ReleaseDC(IntPtr, IntPtr)' 但不使用该方法返回的 HRESULT 或错误代码。这可能会导致在出错或资源较少的情况下出现意外行为。请使用条件语句中的结果，并将结果赋给变量或将其作为变量传递给另一个方法。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#OnPaint(System.Windows.Forms.PaintEventArgs)" Kind="Method" Static="False" Accessibility="Family" ExternallyVisible="True">
+           <Messages>
+            <Message TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000" Status="Active" Created="2016-04-14 14:02:24Z" FixCategory="DependsOnFix">
+             <Issue Name="NonExceptionEdge" Certainty="75" Level="Warning" Path="C:\Users\sgb\Desktop\www.NewXing.com" File="IPAddressControl.cs" Line="362">在方法 'IPAddressControl.OnPaint(PaintEventArgs)' 中，请在对 'new SolidBrush(backColor)' 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Issue>
+            </Message>
+            <Message Id="0" TypeName="验证公共方法的参数" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-04-14 14:02:24Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\sgb\Desktop\www.NewXing.com" File="IPAddressControl.cs" Line="362">在外部可见方法 'IPAddressControl.OnPaint(PaintEventArgs)' 中，请在使用参数“e”之前先对其进行验证。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#Parse(System.String)" Kind="Method" Static="False" Accessibility="Private" ExternallyVisible="False">
+           <Messages>
+            <Message Id="System.String.IndexOf(System.String,System.Int32)" TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307" Status="Active" Created="2016-04-14 14:02:24Z" FixCategory="NonBreaking">
+             <Issue Certainty="95" Level="Error" Path="C:\Users\sgb\Desktop\www.NewXing.com" File="IPAddressControl.cs" Line="638">由于 'string.IndexOf(string, int)' 的行为可能会因当前用户的区域设置不同而不同，请将 'IPAddressControl.Parse(string)' 中的此调用替换为对 'string.IndexOf(string, int, StringComparison)' 的调用。如果要向用户显示 'string.IndexOf(string, int, StringComparison)' 的结果(例如，在对一个项列表进行排序以便在列表框中显示时)，请指定“StringComparison.CurrentCulture”或“StringComparison.CurrentCultureIgnoreCase”作为“StringComparison”参数。如果比较不区分大小写的标识符(例如，文件路径、环境变量或注册表项和值)，则指定“StringComparison.OrdinalIgnoreCase”。或者，如果比较区分大小写的标识符，则指定“StringComparison.Ordinal”。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+          <Member Name="#SetAddressBytes(System.Byte[])" Kind="Method" Static="False" Accessibility="Public" ExternallyVisible="True">
+           <Messages>
+            <Message Id="bytes" TypeName="IdentifiersShouldNotContainTypeNames" Category="Microsoft.Naming" CheckId="CA1720" Status="Active" Created="2016-04-14 14:02:24Z" FixCategory="Breaking">
+             <Issue Name="LanguageIndependentMemberParameter" Certainty="75" Level="Error" Path="C:\Users\sgb\Desktop\www.NewXing.com" File="IPAddressControl.cs" Line="223">在成员 'IPAddressControl.SetAddressBytes(byte[])' 中，考虑将参数名称 'bytes' 中的数据类型标识符“bytes”替换为一个更通用的词条，如“value”。</Issue>
+            </Message>
+            <Message Id="0" TypeName="验证公共方法的参数" Category="Microsoft.Design" CheckId="CA1062" Status="Active" Created="2016-04-14 14:02:24Z" FixCategory="DependsOnFix">
+             <Issue Certainty="75" Level="Warning" Path="C:\Users\sgb\Desktop\www.NewXing.com" File="IPAddressControl.cs" Line="226">在外部可见方法 'IPAddressControl.SetAddressBytes(byte[])' 中，请在使用参数“bytes”之前先对其进行验证。</Issue>
+            </Message>
+           </Messages>
+          </Member>
+         </Members>
+        </Type>
+       </Types>
+      </Namespace>
+     </Namespaces>
+    </Module>
+   </Modules>
+  </Target>
+ </Targets>
+ <Rules>
+  <Rule TypeName="AvoidNamespacesWithFewTypes" Category="Microsoft.Design" CheckId="CA1020">
+   <Name>避免使用类型极少的命名空间</Name>
+   <Description>命名空间一般应具有五个以上的类型。</Description>
+   <Resolution Name="Default">考虑将“{0}”中定义的类型与另一个命名空间合并。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182130(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="50">Warning</MessageLevel>
+   <File Name="designrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="DoNotIgnoreMethodResults" Category="Microsoft.Usage" CheckId="CA1806">
+   <Name>不要忽略方法结果</Name>
+   <Description>对于返回新的字符串实例的方法，应将其结果赋予变量并随后使用。如果未将创建新对象的方法(如 String.ToLower())的结果赋给变量，则该调用便浪费了。</Description>
+   <Resolution Name="HResultOrErrorCode">{0} 调用 {1} 但不使用该方法返回的 HRESULT 或错误代码。这可能会导致在出错或资源较少的情况下出现意外行为。请使用条件语句中的结果，并将结果赋给变量或将其作为变量传递给另一个方法。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/ms182273(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="usagerules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="IdentifiersShouldNotContainTypeNames" Category="Microsoft.Naming" CheckId="CA1720">
+   <Name>标识符不应包含类型名称</Name>
+   <Description>应避免在参数和成员中使用特定于某一种语言的类型名称，避免在参数中使用数据类型标识符。类型名对于所有开发人员来说可能不够直观。建议选用通用名称，如“value”。如果不足以区分，应确保采用 .NET Framework 库中定义的类型名，并完全避免采用特定于某一种语言的类型名称。例如，特定于 C# 的类型名有“float”(如果通用名称不足以区分，则使用“Single”)和“ulong”(如果通用名称不足以区分，则使用“UInt64”)等等。</Description>
+   <Resolution Name="LanguageIndependentMemberParameter">在成员 {0} 中，考虑将参数名称 {2} 中的数据类型标识符“{1}”替换为一个更通用的词条，如“value”。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb531486(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="75">Error</MessageLevel>
+   <File Name="namingrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="MarkAssembliesWithNeutralResourcesLanguage" Category="Microsoft.Performance" CheckId="CA1824">
+   <Name>用 NeutralResourcesLanguageAttribute 标记程序集</Name>
+   <Description>NeutralResourcesLanguage 特性将用来呈现非特定区域性的程序集资源的语言通知给 ResourceManager。在查找与非特定区域性语言具有相同区域性的资源时，ResourceManager 会自动使用位于主程序集内的资源，而不是搜索具有当前线程的当前用户界面区域性的附属程序集。这会改进所加载的第一个资源的查找性能，并缩小工作集。</Description>
+   <Resolution Name="Default">由于程序集 {0} 包含基于 ResX 的资源文件，因此请使用 NeutralResourcesLanguage 特性来标记它，并指定该程序集内的资源所采用的语言。这会改进首次检索资源时的查找性能。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb385967(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Warning</MessageLevel>
+   <File Name="performancerules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="SpecifyStringComparison" Category="Microsoft.Globalization" CheckId="CA1307">
+   <Name>指定 StringComparison</Name>
+   <Description>如果存在采用 StringComparison 参数的重载，则始终先调用此重载，而不是那些不接受该参数的重载。</Description>
+   <Resolution Name="Default">由于 {0} 的行为可能会因当前用户的区域设置不同而不同，请将 {1} 中的此调用替换为对 {2} 的调用。如果要向用户显示 {2} 的结果(例如，在对一个项列表进行排序以便在列表框中显示时)，请指定“StringComparison.CurrentCulture”或“StringComparison.CurrentCultureIgnoreCase”作为“StringComparison”参数。如果比较不区分大小写的标识符(例如，文件路径、环境变量或注册表项和值)，则指定“StringComparison.OrdinalIgnoreCase”。或者，如果比较区分大小写的标识符，则指定“StringComparison.Ordinal”。</Resolution>
+   <Owner />
+   <Url>http://msdn.microsoft.com/library/bb386080(VS.100).aspx</Url>
+   <Email>[none]</Email>
+   <MessageLevel Certainty="95">Error</MessageLevel>
+   <File Name="globalizationrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="丢失范围之前释放对象" Category="Microsoft.Reliability" CheckId="CA2000">
+   <Name>丢失范围之前释放对象</Name>
+   <Description>如果在对某个可释放对象的所有引用超出范围之前未显式释放该对象，则当垃圾回收器运行该对象的终结器时，会在某个不确定时间释放该对象。由于可能会发生阻止该对象的终结器运行的意外事件，因此应改为显式释放该对象。</Description>
+   <Resolution Name="NonExceptionEdge">在方法 {0} 中，请在对 {1} 对象的所有引用超出范围之前，对该对象调用 System.IDisposable.Dispose。</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182289(VS.100).aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="10.0.0.0" />
+  </Rule>
+  <Rule TypeName="验证公共方法的参数" Category="Microsoft.Design" CheckId="CA1062">
+   <Name>验证公共方法的参数</Name>
+   <Description>应检查传递给外部可见方法的所有引用参数是否为 Null (在 VB 中为 Nothing)。如果适用，在参数为 null 时，引发 System.ArgumentNullException。</Description>
+   <Resolution Name="Default">在外部可见方法 {0} 中，请在使用参数“{1}”之前先对其进行验证。</Resolution>
+   <Owner>RuleOwner</Owner>
+   <Url>http://msdn.microsoft.com/library/ms182182(VS.100).aspx</Url>
+   <Email />
+   <MessageLevel Certainty="75">Warning</MessageLevel>
+   <File Name="dataflowrules.dll" Version="10.0.0.0" />
+  </Rule>
+ </Rules>
+ <Localized>
+  <String Key="Category">类别</String>
+  <String Key="Certainty">确定性</String>
+  <String Key="CollapseAll">全部折叠</String>
+  <String Key="CheckId">检查 ID</String>
+  <String Key="Error">错误</String>
+  <String Key="Errors">错误</String>
+  <String Key="ExpandAll">全部展开</String>
+  <String Key="Help">帮助</String>
+  <String Key="Line">行</String>
+  <String Key="Messages">消息</String>
+  <String Key="LocationNotStoredInPdb">[位置未存储在 Pdb 中]</String>
+  <String Key="Project">项目</String>
+  <String Key="Resolution">解析</String>
+  <String Key="Rule">规则</String>
+  <String Key="RuleFile">规则文件</String>
+  <String Key="RuleDescription">规则说明</String>
+  <String Key="Source">源</String>
+  <String Key="Status">状态</String>
+  <String Key="Target">目标</String>
+  <String Key="Warning">警告</String>
+  <String Key="Warnings">警告</String>
+  <String Key="ReportTitle">代码分析报告</String>
+ </Localized>
+</FxCopReport>
